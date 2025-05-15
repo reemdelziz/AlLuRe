@@ -1,6 +1,8 @@
-brew install swig
-pip install faiss-cpu
-# --- Still failed-- did this instead
-conda install -c pytorch faiss-cpu 
-pip install wikipedia
-pip install 
+# pip install -r requirements.txt
+
+-qU "langchain[openai]"
+faiss-cpu
+langchain-community
+langchain-community langchain-core
+langchain-huggingface
+wikipedia
