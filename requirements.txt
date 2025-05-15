@@ -1,0 +1,6 @@
+brew install swig
+pip install faiss-cpu
+# --- Still failed-- did this instead
+conda install -c pytorch faiss-cpu 
+pip install wikipedia
+pip install 
