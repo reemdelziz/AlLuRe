@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>United States</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="icon" href="rose.png">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <h2 class="title">United States of America Wiki</h2>
+
+            <div id="loadingIndicator" class="spinner" style="display: none;"></div>
+
+            <div id="answerBox" class="answer-box"></div>
+
+            <div class="sources-container">
+                <button class="toggle-sources" onclick="toggleSources()">Sources</button>
+                <div class="sources-box" id="sourcesBox"></div>
+            </div>
+
+            <div class="question-group">
+                <input type="text" class="question-box" placeholder="Ask a question..."/>
+                <button type="submit" class="send">Submit</button>
+            </div>
+
+            <!-- submission -->
+             <hr class="section-divider">
+
+            <div class="submit-section">
+                <h3 class="submit-title">Contribute a Fact</h3>
+                <textarea id="userFact" placeholder="Submit a fact..."></textarea>
+                <input id="userSource" placeholder="Source (optional)">
+                <button onclick="submitFact()" class="submit-btn">Submit</button>
+            </div>
+
+
+            <script src="script.js"></script>
+
+        </div>
+    </body>
+</html>
