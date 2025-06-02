@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AlLuRe/static/css/main.ec184c3d.css",
+    "main.js": "/AlLuRe/static/js/main.2f3886e3.js",
+    "index.html": "/AlLuRe/index.html",
+    "main.ec184c3d.css.map": "/AlLuRe/static/css/main.ec184c3d.css.map",
+    "main.2f3886e3.js.map": "/AlLuRe/static/js/main.2f3886e3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec184c3d.css",
+    "static/js/main.2f3886e3.js"
+  ]
+}
