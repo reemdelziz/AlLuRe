@@ -34,7 +34,7 @@ body {
 
 .submit-section {
     width: 100%;
-    /* display: none; */
+    display: flex;
     flex-direction: column;
     gap: 12px;
     background-color: #f9f9f9;
@@ -52,12 +52,17 @@ body {
 
 .source-question {
     font-size: 1rem;
+    font-weight: 600;
     color: #222;
-    margin-bottom: 5px;
+    margin: 15px 0 10px;
 }
 
 .source-select {
-    margin-bottom: 5px;
+    /* display: flex; */
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    margin-bottom: 1px;
 }
 
 .submit-input {

@@ -51,22 +51,28 @@ export default function FactSubmission() {
           
           <div className="source-select">
             <label>
-              <input type="radio" name="source" id="linkSource" value="WikiPage" className=""></input>
+              <input
+                type="radio"
+                name="source"
+                value="WikiPage"
+                checked={source === "WikiPage"}
+                onChange={(e) => setSource(e.target.value)}
+              />
               Wiki Page Title
-            </label><br/>
+            </label><br/><br/>
             <label>
-              <input type="radio" name="source" id="directSource" value="DirectFact" className=""></input>
+              <input
+                type="radio"
+                name="source"
+                value="DirectFact"
+                checked={source === "DirectFact"}
+                onChange={(e) => setSource(e.target.value)}
+              />
               Direct Content or Fact
-            </label><br/>
+            </label><br/><br/>
+
           </div>
 
-          {/* <input
-            id="userSource"
-            placeholder="Source (optional)"
-            value={source}
-            onChange={(e) => setSource(e.target.value)}
-            className="submit-input"
-          /> */}
           <button onClick={handleSubmit} className="submit-btn">
             Submit
           </button>
