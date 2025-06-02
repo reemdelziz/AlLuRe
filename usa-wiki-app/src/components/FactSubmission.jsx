@@ -13,6 +13,7 @@ export default function FactSubmission() {
 
   const handleSubmit = async () => {
     if (!fact.trim()) return alert("Please enter a fact.");
+    if (!source) return alert("Please select a source type.");
     // const response = await fetch("http://localhost:5000/submit", {
     //   method: "POST",
     //   headers: { "Content-Type": "application/json" },
