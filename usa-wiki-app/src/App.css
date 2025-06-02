@@ -34,7 +34,7 @@ body {
 
 .submit-section {
     width: 100%;
-    display: none;
+    /* display: none; */
     flex-direction: column;
     gap: 12px;
     background-color: #f9f9f9;
@@ -47,6 +47,16 @@ body {
 .submit-title {
     font-size: 1.1rem;
     color: #222;
+    margin-bottom: 5px;
+}
+
+.source-question {
+    font-size: 1rem;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.source-select {
     margin-bottom: 5px;
 }
 
@@ -133,6 +143,12 @@ button:nth-child(2) {
     margin-bottom: 10px;
 }
 
+.confidenceScore {
+    font-style: italic;
+    font-size: 0.9rem;
+    float: right;
+}
+
 .sources-container {
     width: 100%;
     margin-top: 10px;
@@ -168,7 +184,6 @@ button:nth-child(2) {
 }
 
 .sources-box {
-    display: none; /* Hidden by default */
     background-color: #f9f9f9;
     border-left: 3px solid #77858f;
     padding: 15px;

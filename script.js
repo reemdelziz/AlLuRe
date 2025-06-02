@@ -5,7 +5,7 @@ const qBox = document.querySelector(".question-box");
 const sub = document.querySelector(".send")
 let count = 0
 
-function displayAnswer(answer, sources) {
+function displayAnswer(answer, sources, confidence) {
     document.getElementById('answerBox').textContent = answer;
 
     const sourcesBox = document.getElementById('sourcesBox');
@@ -13,7 +13,10 @@ function displayAnswer(answer, sources) {
 
     sources.forEach((src, index) => {
         const p = document.createElement('p');
-        p.textContent = `${index + 1}. ${src}\n`;
+        p.innerHTML = `
+        <strong>${index + 1}. ${src.title}</strong><br/>
+        ${src.content}
+        `;
         sourcesBox.appendChild(p);
     });
 }
@@ -43,6 +46,18 @@ function submitFact() {
   .then(data => {
     alert(data.message);
   });
+}
+
+function toggleSubmission() {
+    const box = document.getElementById('submitBox');
+    // const button = document.querySelector('.toggle-submission');
+    if (box.style.display === 'none' || box.style.display === '') {
+        box.style.display = 'flex';
+        // button.textContent = 'Hide Sources';
+    } else {
+        box.style.display = 'none';
+        // button.textContent = 'Show Sources';
+    }
 }
 
 
@@ -79,9 +94,10 @@ sub.addEventListener("click", () => {
 
         const answer = data.answer || "No answer returned.";
         const sources = data.sources || [];
+        const confidence = data.confidence || 0;
 
         // Display the answer on the page
-        displayAnswer(answer, sources);
+        displayAnswer(answer, sources, confidence);
     })
     .catch(err => {
         console.error("Error calling backend:", err);

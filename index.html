@@ -27,13 +27,15 @@
             </div>
 
             <!-- submission -->
-             <hr class="section-divider">
+            <hr class="section-divider">
 
-            <div class="submit-section">
-                <h3 class="submit-title">Contribute a Fact</h3>
-                <textarea id="userFact" placeholder="Submit a fact..."></textarea>
-                <input id="userSource" placeholder="Source (optional)">
-                <button onclick="submitFact()" class="submit-btn">Submit</button>
+            <div class="submit-container">
+                <button class="toggle-submission" onclick="toggleSubmission()"><h3 class="submit-title">Contribute A Fact</h3></button>
+                <div class="submit-section" id="submitBox">
+                    <textarea id="userFact" placeholder="Submit a fact..."></textarea>
+                    <input id="userSource" placeholder="Source (optional)">
+                    <button onclick="submitFact()" class="submit-btn">Submit</button>
+                </div>
             </div>
 
 
