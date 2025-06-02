@@ -18,7 +18,7 @@ function App() {
     setLoading(true);
     setAnswer("");
     try {
-      const res = await fetch("http://localhost:5000/ask", {
+      const res = await fetch("https://allure-sui5.onrender.com/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
@@ -28,7 +28,7 @@ function App() {
       setSources(data.sources || []);
       setConfidence(data.confidence || 0.0);
     } catch (err) {
-      setAnswer("⚠️ Error loading answer.");
+      setAnswer("⚠️ I couldn't find an answer right now. Please contact wikibotsupport@allure.com.");
     } finally {
       setLoading(false);
     }
