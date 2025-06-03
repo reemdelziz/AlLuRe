@@ -18,7 +18,7 @@ function App() {
     setLoading(true);
     setAnswer("");
     try {
-      const res = await fetch("https://allure-sui5.onrender.com/ask", {
+      const res = await fetch("https://allure-production.up.railway.app/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),

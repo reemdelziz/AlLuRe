@@ -31,7 +31,7 @@ related_articles = [
     "Demographics of the United States",
     "Culture of the United States",
     "Education in the United States",
-    "List of presidents of the United States",
+    "List of presidents of the United States"
 ]
 
 # --- Helper to extract Wikipedia tables ---
